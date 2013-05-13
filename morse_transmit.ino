@@ -6,7 +6,7 @@ Will receive a message on the console and transmit as Morse code.
 
 */
 
-int led = 13;
+int led = 7;
 
 // all timing is derived from dit length value
 int dit = 100;
@@ -54,7 +54,6 @@ byte imc7 = B11000111;
 byte imc8 = B11100111;
 byte imc9 = B11110111;
 */
-
 String IMC[36] = {"dD","Dddd","DdDd","Ddd","d","ddDd","DDd","dddd","dd","dDDD","DdD",
                   "dDdd","DD","Dd","DDD","dDDd","DDdD","dDd","ddd","D","ddD","dddD","dDD",
                   "DddD","DdDD","DDdd","DDDDD","dDDDD","ddDDD","dddDD","ddddD","ddddd",
@@ -106,9 +105,8 @@ void loop(){
       else{
         delay(wrdsep);
       }
-      delay(letsep);
+      delay(dit);  
     }
+    delay(letsep);  
   }
-
-  delay(2000);
 }
